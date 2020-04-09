@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dietBodyForth">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/myBanner"
+                android:layout_width="600dp"
+                android:layout_height="250dp"
+                android:src="@drawable/vegandietbanner" />
+
+            <TextView
+                android:id="@+id/myHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myBanner"
+                android:layout_centerHorizontal="true"
+                android:text="A Low Carb Diet"
+                android:textSize="35dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myHeader"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="A low-carb diet is low in carbohydrates, primarily found in sugary foods, pasta and bread. Instead, you eat whole foods including natural proteins, fats and vegetables." />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desc"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text="Difficulty Level"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="2"
+                android:stepSize="0.5" />
+
+            <TextView
+                android:id="@+id/benefits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Benefits"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/benefits"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Reduced Blood Sugar and Insulin Levels" />
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Increased Levels of 'Good' HDL Cholesterol" />
+
+            <TextView
+                android:id="@+id/third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Effective Against Metabolic Syndrome" />
+
+            <TextView
+                android:id="@+id/forth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Therapeutic for Several Brain Disorders" />
+
+            <TextView
+                android:id="@+id/guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forth"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="Basic Guide"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/firstRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guide"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" What You Can Eat"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/firstDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstRisk"
+                android:text="Meat, fish, eggs, vegetables growing above ground and natural fats (like butter)." />
+
+            <TextView
+                android:id="@+id/secondRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstDesc"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" Food To Avoid "
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/secondDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secondRisk"
+                android:text="Sugar and starchy foods (like bread, pasta, rice, beans and potatoes)." />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".workoutArm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/myBanner"
+                android:layout_width="600dp"
+                android:layout_height="250dp"
+                android:src="@drawable/armworkoutbanner"/>
+
+            <TextView
+                android:id="@+id/myHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/myBanner"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:text="Arm Workout"/>
+
+
+
+            <TextView
+                android:id="@+id/biceps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myHeader"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginTop="10dp"
+                android:text="Biceps"/>
+            <TextView
+                android:id="@+id/bicepBasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/biceps"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="10dp"
+                android:text="Basic"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/bicepBasicJif"
+                android:layout_width="238dp"
+                android:layout_height="174dp"
+                android:layout_below="@+id/bicepBasic"
+                android:layout_marginRight="150dp"
+                android:layout_marginBottom="300dp"
+                android:src="@drawable/bicepjif" />
+
+
+<!--            <ImageView-->
+<!--                android:id="@+id/bicepBasicImg"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentLeft="true"-->
+<!--                android:src="@drawable/fullbody"-->
+<!--                android:layout_below="@+id/bicepBasic"/>-->
+            <TextView
+                android:id="@+id/bicepBasicDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepBasic"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="STANDING BARBELL CURL"/>
+            <TextView
+                android:id="@+id/bicepBasicDesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepBasicDesc"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="BAND HAMMER CURL"/>
+
+            <TextView
+                android:id="@+id/bicepBasicDesc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepBasicDesc2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="STANDING DUMBBELL CURL"/>
+
+            <TextView
+                android:id="@+id/bicepAdvance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepBasicDesc3"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="50dp"
+                android:text="Advance"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/bicepAdvanceJif"
+                android:layout_width="238dp"
+                android:layout_height="172dp"
+                android:layout_below="@+id/bicepAdvance"
+                android:layout_marginRight="150dp"
+                android:layout_marginBottom="300dp"
+                android:src="@drawable/advancebicepjif" />
+
+
+
+            <TextView
+                android:id="@+id/bicepAdvanceDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepAdvance"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="DECLINE DUMBBELL CURL"/>
+            <TextView
+                android:id="@+id/bicepAdvanceDesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepAdvanceDesc"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="INCLINE DUMBBELL CURL"/>
+
+            <TextView
+                android:id="@+id/bicepAdvanceDesc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepAdvanceDesc2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="KNEELING SINGLE-ARM CURL"/>
+
+
+            <TextView
+                android:id="@+id/forearm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepAdvanceDesc3"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginTop="80dp"
+                android:text="Forearm"/>
+            <TextView
+                android:id="@+id/forearmBasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forearm"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="10dp"
+                android:text="Basic"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/forearmBasicJif"
+                android:layout_width="242dp"
+                android:layout_height="164dp"
+                android:layout_below="@+id/forearmBasic"
+                android:layout_marginRight="150dp"
+
+                android:src="@drawable/basicforearm" />
+
+            <TextView
+                android:id="@+id/forearmBasicDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forearmBasic"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="Palms-up wrist curl"/>
+            <TextView
+                android:id="@+id/forearmBasicDesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forearmBasicDesc"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="Dead hangs"/>
+
+            <TextView
+                android:id="@+id/forearmBasicDesc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forearmBasicDesc2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="STANDING DUMBBELL CURL"/>
+
+            <TextView
+                android:id="@+id/forearmAdvance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forearmBasicJif"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="10dp"
+                android:text="Advance"/>
+
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/forearmAdvanceJif"
+                android:layout_width="299dp"
+                android:layout_height="230dp"
+                android:layout_below="@+id/forearmAdvance"
+                android:layout_marginTop="-8dp"
+
+                android:layout_marginRight="150dp"
+                android:src="@drawable/advanceforearm" />
+
+            <TextView
+                android:id="@+id/forearmAdvanceDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forearmAdvance"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="DECLINE DUMBBELL CURL"/>
+            <TextView
+                android:id="@+id/forearmAdvanceDesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forearmAdvanceDesc"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="INCLINE DUMBBELL CURL"/>
+
+            <TextView
+                android:id="@+id/forearmAdvanceDesc3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/forearmAdvanceDesc2"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:text="KNEELING SINGLE-ARM CURL"/>
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

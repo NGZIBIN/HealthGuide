@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activityWorkoutFullbody">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/myBanner"
+                android:layout_width="600dp"
+                android:layout_height="250dp"
+                android:src="@drawable/fullbodybanner"/>
+
+            <TextView
+                android:id="@+id/myHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/myBanner"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:text="Full Body Workout"/>
+
+
+            <TextView
+                android:id="@+id/bicepBasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myHeader"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginTop="10dp"
+                android:text="Basic"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/chestBasicJif"
+                android:layout_width="305dp"
+                android:layout_height="216dp"
+                android:layout_below="@+id/bicepBasic"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="50dp"
+                android:src="@drawable/fullbodybasic" />
+
+            <TextView
+                android:id="@+id/bicepBasicDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepBasic"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="100dp"
+                android:text="STANDING BARBELL LIFT"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/chestBasicJif2"
+                android:layout_width="305dp"
+                android:layout_height="216dp"
+                android:layout_below="@+id/chestBasicJif"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="50dp"
+                android:src="@drawable/fullbodybasic3" />
+
+            <TextView
+                android:id="@+id/bicepBasicDesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chestBasicJif"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="100dp"
+                android:text="BENCH BARBELL CURL"/>
+
+
+            <TextView
+                android:id="@+id/bicepAdvance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chestBasicJif2"
+                android:layout_alignParentLeft="true"
+                android:textSize="18dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:text="Advance"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/bicepAdvanceJif"
+                android:layout_width="267dp"
+                android:layout_height="186dp"
+                android:layout_below="@+id/bicepAdvance"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="50dp"
+                android:src="@drawable/fullbodyadvance" />
+
+
+
+            <TextView
+                android:id="@+id/bicepAdvanceDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepAdvance"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="90dp"
+                android:text="DECLINE DUMBBELL CURL"/>
+
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/bicepAdvanceJif2"
+                android:layout_width="267dp"
+                android:layout_height="186dp"
+                android:layout_below="@+id/bicepAdvanceJif"
+                android:layout_marginRight="100dp"
+                android:layout_marginBottom="300dp"
+                android:src="@drawable/fullbodybasic2" />
+
+
+
+            <TextView
+                android:id="@+id/bicepAdvanceDesc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bicepAdvanceJif"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="90dp"
+                android:text="BENCH CHEST PRESS"/>
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

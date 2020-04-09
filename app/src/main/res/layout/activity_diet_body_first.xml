@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dietBodyFirst">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/myBanner"
+            android:layout_width="600dp"
+            android:layout_height="250dp"
+            android:src="@drawable/bannerdietlowfat"/>
+
+        <TextView
+            android:id="@+id/myHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/myBanner"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            android:text="Very Low Fat Diet"/>
+
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/myHeader"
+            android:layout_centerHorizontal="true"
+            android:text="An ultra-low-fat — or very-low-fat — diet allows for no more than 10% of calories from fat. It also tends to be low in protein and very high in carbs — with about 10% and 80% of daily calories, respectively."/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/desc"
+            android:layout_alignParentLeft="true"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_marginTop="10dp"
+            android:text="Difficulty Level"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rating"
+            android:numStars="5"
+            android:isIndicator="true"
+            android:rating="3.5"
+            android:stepSize="0.5"/>
+
+        <TextView
+            android:id="@+id/benefits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingBar"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="10dp"
+            android:text="Benefits"/>
+        <TextView
+            android:id="@+id/first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/benefits"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:text=" - Prevent Heart diseases"/>
+
+        <TextView
+            android:id="@+id/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:text=" - Reduce Risk Of Diabetes"/>
+
+        <TextView
+            android:id="@+id/third"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/second"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:text=" - Prevent Obesity"/>
+
+        <TextView
+            android:id="@+id/forth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/third"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:text=" - Prevent Multiple Sclerosis"/>
+
+        <TextView
+            android:id="@+id/guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/forth"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="10dp"
+            android:text="Basic Guide"/>
+
+        <TextView
+            android:id="@+id/firstRisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/guide"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:text=" - Consume more fruits"/>
+
+        <TextView
+            android:id="@+id/secondRisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstRisk"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:text=" - Consume more vegetables "/>
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+</ScrollView>

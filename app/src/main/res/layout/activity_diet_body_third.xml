@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dietBodyThird">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/myBanner"
+                android:layout_width="600dp"
+                android:layout_height="250dp"
+                android:src="@drawable/vegandietbanner"/>
+
+            <TextView
+                android:id="@+id/myHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/myBanner"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:text="The Vegan Diet"/>
+
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myHeader"
+                android:layout_centerHorizontal="true"
+                android:text="A vegan diet contains only plants (such as vegetables, grains, nuts and fruits) and foods made from plants. Vegans do not eat foods that come from animals, including dairy products and eggs."/>
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desc"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_marginTop="10dp"
+                android:text="Difficulty Level"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating"
+                android:numStars="5"
+                android:isIndicator="true"
+                android:rating="4.5"
+                android:stepSize="0.5"/>
+
+            <TextView
+                android:id="@+id/benefits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginTop="10dp"
+                android:text="Benefits"/>
+            <TextView
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/benefits"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Lowering Odds of certain diseases"/>
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Better weight control"/>
+
+            <TextView
+                android:id="@+id/third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Good Nutrition"/>
+
+
+
+            <TextView
+                android:id="@+id/guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginTop="10dp"
+                android:text="Basic Guide"/>
+
+            <TextView
+                android:id="@+id/firstRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guide"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text=" What You Can Eat"/>
+
+            <TextView
+                android:id="@+id/firstDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstRisk"
+                android:text="Fruits and vegetables, Legumes such as peas, beans, and lentils, Nuts and seeds, Breads, rice, and pasta, Dairy alternatives such as soymilk, coconut milk, and almond milk, Vegetable oils"/>
+
+            <TextView
+                android:id="@+id/secondRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstDesc"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"
+                android:text=" What You Cannot Eat "/>
+
+            <TextView
+                android:id="@+id/secondDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secondRisk"
+                android:text="Beef, pork, lamb, and other red meat, Chicken, duck, and other poultry, Fish or shellfish such as crabs, clams, and mussels, Eggs, Cheese, butter, Milk, cream, ice cream, and other dairy products, Mayonnais (because it includes egg yolks), Honey"/>
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

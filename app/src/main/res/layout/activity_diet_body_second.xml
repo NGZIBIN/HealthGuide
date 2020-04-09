@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dietBodySecond">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/myBanner"
+                android:layout_width="600dp"
+                android:layout_height="250dp"
+                android:src="@drawable/anabolicbanner"/>
+
+            <TextView
+                android:id="@+id/myHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/myBanner"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                android:text="The Anabolic Diet"/>
+
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myHeader"
+                android:layout_centerHorizontal="true"
+                android:text="The anabolic diet is a low-carbohydrate diet based on alternating low-carb and high-carb days."/>
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desc"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_marginTop="10dp"
+                android:text="Difficulty Level"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating"
+                android:numStars="5"
+                android:isIndicator="true"
+                android:rating="4"
+                android:stepSize="0.5"/>
+
+            <TextView
+                android:id="@+id/benefits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ratingBar"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginTop="10dp"
+                android:text="Benefits"/>
+            <TextView
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/benefits"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Turning Body into a fat-burning machine"/>
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Gain Muscle Mass"/>
+
+            <TextView
+                android:id="@+id/third"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text=" - Different Phases"/>
+
+
+
+            <TextView
+                android:id="@+id/guide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/third"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:layout_marginTop="10dp"
+                android:text="Basic Guide"/>
+
+            <TextView
+                android:id="@+id/firstRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guide"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text=" Maintenance and induction phase"/>
+
+            <TextView
+                android:id="@+id/firstDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstRisk"
+                android:text="It is suggested for weeks one to four with caloric intake levels of 18 times your body weight in pounds. It’s designed to allow your body to become accustomed to the low-carb intake at the beginning of the diet and is used as a maintenance level throughout."/>
+
+            <TextView
+                android:id="@+id/secondRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstDesc"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text=" Bulk Phase "/>
+
+            <TextView
+                android:id="@+id/secondDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secondRisk"
+                android:text="The bulk phase then follows the induction phase, with the primary goal of achieving a desired bulk weight. There isn’t a set length of time for this phase, as followers are encouraged to stay on until the weight gain is achieved."/>
+
+            <TextView
+                android:id="@+id/thirdRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/secondDesc"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:text=" Cutting phase "/>
+
+            <TextView
+                android:id="@+id/thirdDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/thirdRisk"
+                android:text="cutting phase is essentially a low-carb weight loss plan, with recommendations to cut 500 to 1,000 calories from the maintenance phase. This phase should be run until you achieve a desired body fat percentage, preferably less than 10 percent."/>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
