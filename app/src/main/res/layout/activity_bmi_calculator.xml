@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+
+    android:orientation="vertical"
+    tools:context=".BMI_calculator">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="60dp"
+            android:textColor="#000000"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:text="Calculate your                     Body Mass Index"/>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"/>
+
+
+        <RadioGroup
+            android:id="@+id/GenderRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/title"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/maleBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:button="@drawable/maleicon"
+                android:background="@drawable/selected"
+                android:layout_marginRight="40dp"/>
+
+            <RadioButton
+                android:id="@+id/femaleBtn"
+                android:layout_width="wrap_content"
+                android:background="@drawable/selected"
+                android:layout_height="wrap_content"
+                android:button="@drawable/femaleicon"/>
+
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/weightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight in Kg"
+            android:layout_below="@+id/GenderRadioGroup"
+            android:textSize="20dp"
+            android:layout_marginTop="100dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="80dp"/>
+
+        <EditText
+            android:id="@+id/etWeight"
+            android:layout_below="@+id/GenderRadioGroup"
+            android:layout_width="120dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/edittextbackground"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/heightTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height in cm"
+            android:layout_below="@+id/weightTitle"
+            android:textSize="20dp"
+            android:layout_marginTop="50dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="80dp"/>
+
+        <EditText
+            android:id="@+id/etHeight"
+            android:layout_below="@+id/etWeight"
+            android:layout_width="120dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edittextbackground"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/ageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:layout_below="@+id/heightTitle"
+            android:textSize="20dp"
+            android:layout_marginTop="60dp"
+            android:textColor="#000000"
+            android:layout_marginLeft="80dp"/>
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_below="@+id/etHeight"
+            android:layout_width="120dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/edittextbackground"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etAge"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:background="#7cadb9"
+            android:layout_marginBottom="20dp"
+            android:text="SUBMIT"/>
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

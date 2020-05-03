@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg"
+    android:background="@drawable/bgsecond"
     android:weightSum="10"
     tools:context=".workout_Activity">
 
@@ -54,10 +54,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/btnArm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="goArm"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/gym" />
 
@@ -104,10 +105,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/btnLeg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="goLeg"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/leg" />
 
@@ -146,10 +148,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/btnChest"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="goChest"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/chest" />
 
@@ -204,10 +207,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/btnBody"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="goBody"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/fullbody" />
 

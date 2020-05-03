@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 ImageButton imgBtnHealth;
-ImageButton imgBtnWorkout;
+ImageView imgBtnWorkout;
 ImageButton imgBtnDiet;
 
 
@@ -23,13 +23,9 @@ ImageButton imgBtnDiet;
         imgBtnDiet = findViewById(R.id.btnDiet);
 
 
-        imgBtnWorkout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,workout_Activity.class);
-                startActivity(intent);
-            }
-        });
+
+
+
 
         imgBtnDiet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,5 +34,19 @@ ImageButton imgBtnDiet;
                 startActivity(intent);
             }
         });
+    }
+    public void goWorkout(View view) {
+        Intent intent = new Intent(MainActivity.this,workout_Activity.class);
+                startActivity(intent);
+    }
+
+    public void goBMI(View view) {
+        Intent intent = new Intent(MainActivity.this,BMI_calculator.class);
+        startActivity(intent);
+    }
+
+    public void goGallery(View view) {
+        Intent intent = new Intent(MainActivity.this,NoteActivity.class);
+        startActivity(intent);
     }
 }

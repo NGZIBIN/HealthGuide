@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.healthguide">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".workoutChest"></activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".NoteActivity" />
+        <activity android:name=".BMI_calculator" />
+        <activity android:name=".LegAdvance1" />
+        <activity android:name=".LegBasic1" />
+        <activity android:name=".BodyAdvance2" />
+        <activity android:name=".BodyAdvance1" />
+        <activity android:name=".BodyBasic2" />
+        <activity android:name=".BodyBasic1" />
+        <activity android:name=".ChestAdvance2" />
+        <activity android:name=".ChestAdvance1" />
+        <activity android:name=".ChestBasic2" />
+        <activity android:name=".ChestBasic1" />
+        <activity android:name=".ArmAdvanceForearm" />
+        <activity android:name=".ArmForeArmBasic" />
+        <activity android:name=".ArmBiceptAdvance" />
+        <activity android:name=".ArmBicepBasic" />
+        <activity android:name=".workoutChest" />
         <activity android:name=".workoutleg" />
         <activity android:name=".workoutArm" />
         <activity android:name=".activityWorkoutFullbody" />
@@ -19,7 +38,7 @@
         <activity android:name=".dietBodyFirst" />
         <activity android:name=".diet_Activity" />
         <activity android:name=".workout_Activity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".splashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

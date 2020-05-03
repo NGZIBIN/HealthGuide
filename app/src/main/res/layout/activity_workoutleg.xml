@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgwhite"
     tools:context=".workoutleg">
 
     <LinearLayout
@@ -61,6 +62,7 @@
                 android:id="@+id/bicepBasicJif"
                 android:layout_width="238dp"
                 android:layout_height="174dp"
+                android:onClick="LegBasic1"
                 android:layout_below="@+id/bicepBasic"
                 android:layout_marginRight="150dp"
                 android:layout_marginBottom="300dp"
@@ -72,10 +74,11 @@
                 android:id="@+id/bicepBasicDesc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="LegBasic1"
                 android:layout_below="@+id/bicepBasic"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="STANDING BARBELL CURL"/>
+                android:text=""/>
             <TextView
                 android:id="@+id/bicepBasicDesc2"
                 android:layout_width="wrap_content"
@@ -83,16 +86,17 @@
                 android:layout_below="@+id/bicepBasicDesc"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="BAND HAMMER CURL"/>
+                android:text=""/>
 
             <TextView
                 android:id="@+id/bicepBasicDesc3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bicepBasicDesc2"
+                android:onClick="LegBasic1"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="STANDING DUMBBELL CURL"/>
+                android:text="DUMBBELL LUNGES"/>
 
             <TextView
                 android:id="@+id/bicepAdvance"
@@ -110,6 +114,7 @@
                 android:layout_width="238dp"
                 android:layout_height="172dp"
                 android:layout_below="@+id/bicepAdvance"
+                android:onClick="LegAdvance1"
                 android:layout_marginRight="150dp"
                 android:layout_marginBottom="300dp"
                 android:src="@drawable/advanceleg" />
@@ -121,9 +126,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bicepAdvance"
+
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="DECLINE DUMBBELL CURL"/>
+                android:text=""/>
             <TextView
                 android:id="@+id/bicepAdvanceDesc2"
                 android:layout_width="wrap_content"
@@ -131,16 +137,17 @@
                 android:layout_below="@+id/bicepAdvanceDesc"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="INCLINE DUMBBELL CURL"/>
+                android:text=""/>
 
             <TextView
                 android:id="@+id/bicepAdvanceDesc3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bicepAdvanceDesc2"
+                android:onClick="LegAdvance1"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="KNEELING SINGLE-ARM CURL"/>
+                android:text="BARBELL SQUATS"/>
 
             
 

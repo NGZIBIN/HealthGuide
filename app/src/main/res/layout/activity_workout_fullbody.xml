@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bgwhite"
     tools:context=".activityWorkoutFullbody">
 
     <LinearLayout
@@ -51,6 +52,7 @@
                 android:layout_width="305dp"
                 android:layout_height="216dp"
                 android:layout_below="@+id/bicepBasic"
+                android:onClick="BodyBasic1"
                 android:layout_marginRight="100dp"
                 android:layout_marginBottom="50dp"
                 android:src="@drawable/fullbodybasic" />
@@ -60,14 +62,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bicepBasic"
+                android:onClick="BodyBasic1"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="100dp"
-                android:text="STANDING BARBELL LIFT"/>
+                android:text="MOUNTAIN CLIMBER"/>
 
             <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/chestBasicJif2"
                 android:layout_width="305dp"
                 android:layout_height="216dp"
+                android:onClick="BodyBasic2"
                 android:layout_below="@+id/chestBasicJif"
                 android:layout_marginRight="100dp"
                 android:layout_marginBottom="50dp"
@@ -77,16 +81,18 @@
                 android:id="@+id/bicepBasicDesc2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="BodyBasic2"
                 android:layout_below="@+id/chestBasicJif"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="100dp"
-                android:text="BENCH BARBELL CURL"/>
+                android:text="NORMAL PUSH UP"/>
 
 
             <TextView
                 android:id="@+id/bicepAdvance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+
                 android:layout_below="@+id/chestBasicJif2"
                 android:layout_alignParentLeft="true"
                 android:textSize="18dp"
@@ -98,6 +104,7 @@
                 android:layout_width="267dp"
                 android:layout_height="186dp"
                 android:layout_below="@+id/bicepAdvance"
+                android:onClick="BodyAdvance1"
                 android:layout_marginRight="100dp"
                 android:layout_marginBottom="50dp"
                 android:src="@drawable/fullbodyadvance" />
@@ -109,15 +116,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bicepAdvance"
+                android:onClick="BodyAdvance1"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="90dp"
-                android:text="DECLINE DUMBBELL CURL"/>
+                android:text="DUMBBELL SQUATS"/>
 
 
             <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/bicepAdvanceJif2"
                 android:layout_width="267dp"
                 android:layout_height="186dp"
+                android:onClick="BodyAdvance2"
                 android:layout_below="@+id/bicepAdvanceJif"
                 android:layout_marginRight="100dp"
                 android:layout_marginBottom="300dp"
@@ -130,9 +139,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bicepAdvanceJif"
+                android:onClick="BodyAdvance2"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="90dp"
-                android:text="BENCH CHEST PRESS"/>
+                android:text="FOWARD SKIP LUNGES"/>
 
 
 

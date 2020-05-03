@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bgwhite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".workoutArm">
@@ -62,18 +63,19 @@
                 android:layout_width="238dp"
                 android:layout_height="174dp"
                 android:layout_below="@+id/bicepBasic"
+                android:onClick="startWorkoutArmBicep"
                 android:layout_marginRight="150dp"
                 android:layout_marginBottom="300dp"
                 android:src="@drawable/bicepjif" />
 
 
-<!--            <ImageView-->
-<!--                android:id="@+id/bicepBasicImg"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentLeft="true"-->
-<!--                android:src="@drawable/fullbody"-->
-<!--                android:layout_below="@+id/bicepBasic"/>-->
+            <!--            <ImageView-->
+            <!--                android:id="@+id/bicepBasicImg"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentLeft="true"-->
+            <!--                android:src="@drawable/fullbody"-->
+            <!--                android:layout_below="@+id/bicepBasic"/>-->
             <TextView
                 android:id="@+id/bicepBasicDesc"
                 android:layout_width="wrap_content"
@@ -81,7 +83,7 @@
                 android:layout_below="@+id/bicepBasic"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="STANDING BARBELL CURL"/>
+                android:text=""/>
             <TextView
                 android:id="@+id/bicepBasicDesc2"
                 android:layout_width="wrap_content"
@@ -89,13 +91,14 @@
                 android:layout_below="@+id/bicepBasicDesc"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="BAND HAMMER CURL"/>
+                android:text=""/>
 
             <TextView
                 android:id="@+id/bicepBasicDesc3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bicepBasicDesc2"
+                android:onClick="startWorkoutArmBicep"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
                 android:text="STANDING DUMBBELL CURL"/>
@@ -116,6 +119,7 @@
                 android:layout_width="238dp"
                 android:layout_height="172dp"
                 android:layout_below="@+id/bicepAdvance"
+                android:onClick="startWorkoutAdvanceBicepArm"
                 android:layout_marginRight="150dp"
                 android:layout_marginBottom="300dp"
                 android:src="@drawable/advancebicepjif" />
@@ -129,14 +133,15 @@
                 android:layout_below="@+id/bicepAdvance"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="DECLINE DUMBBELL CURL"/>
+                android:text=""/>
             <TextView
                 android:id="@+id/bicepAdvanceDesc2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bicepAdvanceDesc"
+                android:onClick="startWorkoutAdvanceBicepArm"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="50dp"
                 android:text="INCLINE DUMBBELL CURL"/>
 
             <TextView
@@ -146,7 +151,7 @@
                 android:layout_below="@+id/bicepAdvanceDesc2"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="KNEELING SINGLE-ARM CURL"/>
+                android:text=""/>
 
 
             <TextView
@@ -177,7 +182,7 @@
                 android:layout_height="164dp"
                 android:layout_below="@+id/forearmBasic"
                 android:layout_marginRight="150dp"
-
+                android:onClick="startWorkoutBasicForearm"
                 android:src="@drawable/basicforearm" />
 
             <TextView
@@ -187,7 +192,7 @@
                 android:layout_below="@+id/forearmBasic"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="Palms-up wrist curl"/>
+                android:text=""/>
             <TextView
                 android:id="@+id/forearmBasicDesc2"
                 android:layout_width="wrap_content"
@@ -195,7 +200,7 @@
                 android:layout_below="@+id/forearmBasicDesc"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="Dead hangs"/>
+                android:text=""/>
 
             <TextView
                 android:id="@+id/forearmBasicDesc3"
@@ -204,6 +209,7 @@
                 android:layout_below="@+id/forearmBasicDesc2"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
+                android:onClick="startWorkoutBasicForearm"
                 android:text="STANDING DUMBBELL CURL"/>
 
             <TextView
@@ -224,7 +230,7 @@
                 android:layout_height="230dp"
                 android:layout_below="@+id/forearmAdvance"
                 android:layout_marginTop="-8dp"
-
+                android:onClick="startWorkoutAdvanceForearm"
                 android:layout_marginRight="150dp"
                 android:src="@drawable/advanceforearm" />
 
@@ -235,7 +241,7 @@
                 android:layout_below="@+id/forearmAdvance"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="DECLINE DUMBBELL CURL"/>
+                android:text=""/>
             <TextView
                 android:id="@+id/forearmAdvanceDesc2"
                 android:layout_width="wrap_content"
@@ -243,16 +249,17 @@
                 android:layout_below="@+id/forearmAdvanceDesc"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="INCLINE DUMBBELL CURL"/>
+                android:text=""/>
 
             <TextView
                 android:id="@+id/forearmAdvanceDesc3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="startWorkoutAdvanceForearm"
                 android:layout_below="@+id/forearmAdvanceDesc2"
                 android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp"
-                android:text="KNEELING SINGLE-ARM CURL"/>
+                android:text="SINGLE-ARM BARBELL RAISE"/>
 
 
 

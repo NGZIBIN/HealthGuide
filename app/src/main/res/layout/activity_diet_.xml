@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bg"
+    android:background="@drawable/bgsecond"
     android:weightSum="10"
     tools:context=".diet_Activity">
 
@@ -54,10 +54,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/btnDietForBodyBuilding"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="goBodyBuilding"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/gym" />
 
@@ -103,10 +104,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/btnDietVegan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="goVegan"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/vegan" />
 
@@ -153,10 +155,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/btnDietForHealth"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="goHealth"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/health" />
 
@@ -211,10 +214,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageButton
+                <ImageView
                     android:id="@+id/btnDietFun"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="goDietFun"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/newex" />
 
