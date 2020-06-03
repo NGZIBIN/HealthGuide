@@ -12,6 +12,7 @@ public class activityWorkoutFullbody extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_fullbody);
+        this.setTitle("Full Body Workout");
     }
 
     public void BodyBasic1(View view){

@@ -14,7 +14,7 @@ public class diet_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet_);
-
+        this.setTitle("Diet");
     }
     public void goBodyBuilding(View view) {
         Intent intent = new Intent(diet_Activity.this,dietBodySecond.class);

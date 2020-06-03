@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 import ticker.views.com.ticker.widgets.circular.timer.callbacks.CircularViewCallback;
@@ -13,13 +15,15 @@ import ticker.views.com.ticker.widgets.circular.timer.view.CircularView;
 
 public class ArmAdvanceForearm extends AppCompatActivity {
 
-
+    FloatingActionButton btnStart;
     CircularView circularViewWithTimer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setTitle("Single Arm Barbell Raise");
         setContentView(R.layout.activity_arm_advance_forearm);
         circularViewWithTimer = findViewById(R.id.circular_view);
+        btnStart = findViewById(R.id.start);
         CircularView.OptionsBuilder builderWithTimer =
                 new CircularView.OptionsBuilder()
                         .shouldDisplayText(true)
@@ -39,16 +43,29 @@ public class ArmAdvanceForearm extends AppCompatActivity {
                         });
 
         circularViewWithTimer.setOptions(builderWithTimer);
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                circularViewWithTimer.startTimer();
+            }
+        });
     }
 
-    public void  btn_start(View view){
-        circularViewWithTimer.startTimer();
-    }
+//    public void  btn_start(View view){
+//
+//        circularViewWithTimer.startTimer();
+//    }
+
 
     public void  btn_pause(View view){
         if(circularViewWithTimer.pauseTimer())
         {
-            //Timer Paused
+            btnStart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    circularViewWithTimer.resumeTimer();
+                }
+            });
         }
     }
 

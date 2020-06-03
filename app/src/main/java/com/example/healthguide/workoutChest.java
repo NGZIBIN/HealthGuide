@@ -13,7 +13,7 @@ public class workoutChest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_chest);
 
-
+        this.setTitle("Chest Workout");
     }
 
     public void GoBasic1(View view){

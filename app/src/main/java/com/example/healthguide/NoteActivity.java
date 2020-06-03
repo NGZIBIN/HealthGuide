@@ -46,6 +46,7 @@ public class NoteActivity extends AppCompatActivity {
     NoteAdapter listAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.setTitle("Log Book");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
 
@@ -67,10 +68,11 @@ public class NoteActivity extends AppCompatActivity {
 
                 Note note = new Note(id, desc, date);
                 listAdapter.add(note);
-                listAdapter.notifyDataSetChanged();
+
 
             }
             while (cursor.moveToNext());
+            listAdapter.notifyDataSetChanged();
         }
 
 
@@ -188,7 +190,7 @@ public class NoteActivity extends AppCompatActivity {
         myBuilder.setPositiveButton("Add", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                int total = 0;
+
                 String addDesc = etInputDesc.getText().toString();
                 String addDate = etInputDate.getText().toString();
 
@@ -201,21 +203,47 @@ public class NoteActivity extends AppCompatActivity {
                 }
                 else{
                     NoteBDHelper helper = new NoteBDHelper(NoteActivity.this);
-                    ArrayList<Note> data = helper.getAllData();
+
 
                     long row = helper.insertData(addDesc, addDate);
                     helper.close();
 
                     if(row != -1){
-
+                        lvData.setAdapter(listAdapter);
                         Toast.makeText(NoteActivity.this,"Added Successfully!", Toast.LENGTH_LONG).show();
+                        noteDB = new NoteBDHelper(getApplicationContext());
+                        db = noteDB.getReadableDatabase();
+                        cursor = noteDB.getAllDataForList();
+                        listAdapter = new NoteAdapter(getApplicationContext(), R.layout.row);
+                        lvData.setAdapter(listAdapter);
+                        if (cursor.moveToFirst()) {
+                            do {
+                                String desc, date;
+                                Integer id;
+                                id = cursor.getInt(0);
+                                desc = cursor.getString(1);
+                                date = cursor.getString(2);
+
+
+                                Note note = new Note(id, desc, date);
+                                listAdapter.add(note);
+
+
+                            }
+                            while (cursor.moveToNext());
+                            listAdapter.notifyDataSetChanged();
+                        }
+                        listAdapter.notifyDataSetChanged();
+
                     }
+                    listAdapter.notifyDataSetChanged();
                 }
             }
         });
         myBuilder.setNegativeButton("Cancel", null);
         AlertDialog myDialog = myBuilder.create();
         myDialog.show();
-
+        listAdapter.notifyDataSetChanged();
     }
+
 }

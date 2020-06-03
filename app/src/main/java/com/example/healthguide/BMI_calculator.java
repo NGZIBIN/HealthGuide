@@ -10,17 +10,20 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.math.BigDecimal;
+
 public class BMI_calculator extends AppCompatActivity {
 
     EditText etHeight, etWeight, etAge;
     Button btnSubmit;
     RadioGroup gender;
-    TextView result;
+    TextView result, bmiResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmi_calculator);
+        this.setTitle("BMI Calculator");
 
         etHeight = findViewById(R.id.etHeight);
         etWeight = findViewById(R.id.etWeight);
@@ -28,6 +31,7 @@ public class BMI_calculator extends AppCompatActivity {
         btnSubmit = findViewById(R.id.btnSubmit);
         gender = findViewById(R.id.GenderRadioGroup);
         result = findViewById(R.id.result);
+        bmiResult = findViewById(R.id.bmiResult);
 
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +57,10 @@ public class BMI_calculator extends AppCompatActivity {
                     etAge.setError("Please enter a age");
                 }
 
+                BigDecimal results;
+                results=round(bmi,2);
+                String resultsBMI = String.valueOf(results);
+                bmiResult.setText(resultsBMI);
 
                 switch (gender.getCheckedRadioButtonId()){
                     case R.id.femaleBtn:
@@ -60,39 +68,48 @@ public class BMI_calculator extends AppCompatActivity {
                                 if(bmi < 21 ){
                                     result.setText("You are severely Overweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else if(bmi < 19){
                                     result.setText("You are Overweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else if(bmi < 14){
                                     result.setText("Your weight is acceptable");
                                     result.setTextColor(Color.parseColor("#008000"));
+                                    bmiResult.setTextColor(Color.parseColor("#008000"));
                                 }
                                 else if(bmi < 13){
                                     result.setText("You are Underweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else{
                                     result.setText("You are severely Underweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                             }else{
                                 if(bmi < 18.5){
                                     result.setText("You are Underweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else if(bmi > 18.5 && bmi < 24.9){
                                     result.setText("You are in a Healthy Weight Range!");
                                     result.setTextColor(Color.parseColor("#008000"));
+                                    bmiResult.setTextColor(Color.parseColor("#008000"));
                                 }
                                 else if(bmi > 25 && bmi < 29.9){
                                     result.setText("You are overweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else{
                                     result.setText("You are in obese range!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                             }
                         break;
@@ -101,46 +118,61 @@ public class BMI_calculator extends AppCompatActivity {
                                 if(bmi < 13 ){
                                     result.setText("You are severely Underweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else if(bmi < 13.3){
                                     result.setText("You are Underweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else if(bmi < 19){
                                     result.setText("Your weight is acceptable");
                                     result.setTextColor(Color.parseColor("#008000"));
+                                    bmiResult.setTextColor(Color.parseColor("#008000"));
                                 }
                                 else if(bmi < 22){
                                     result.setText("You are Overweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else{
                                     result.setText("You are severely Overweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                             }
                             else {
                                 if(bmi < 18.5){
                                     result.setText("You are Underweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else if(bmi > 18.5 && bmi < 24.9){
                                     result.setText("You are in a Healthy Weight Range!");
                                     result.setTextColor(Color.parseColor("#008000"));
+                                    bmiResult.setTextColor(Color.parseColor("#008000"));
                                 }
                                 else if(bmi > 25 && bmi < 29.9){
                                     result.setText("You are overweight!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                                 else{
                                     result.setText("You are in obese range!");
                                     result.setTextColor(Color.parseColor("#FF0000"));
+                                    bmiResult.setTextColor(Color.parseColor("#FF0000"));
                                 }
                             }
+
                         break;
                 }
             }
         });
 
+    }
+    public static BigDecimal round(float d, int decimalPlace) {
+        BigDecimal bd = new BigDecimal(Float.toString(d));
+        bd = bd.setScale(decimalPlace, BigDecimal.ROUND_HALF_UP);
+        return bd;
     }
 }

@@ -12,7 +12,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 public class NoteBDHelper extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 6;
     private static final String DATABASE_NAME = "note";
     private static final String TABLE_NOTE = "notes";
     private static final String COLUMN_ID = "_id";
@@ -51,7 +51,6 @@ public class NoteBDHelper extends SQLiteOpenHelper {
 
         values.put(COLUMN_DATE, date);
 
-        db.insert(TABLE_NOTE, null, values);
 
         long result = db.insert(TABLE_NOTE, null, values);
 
@@ -66,27 +65,26 @@ public class NoteBDHelper extends SQLiteOpenHelper {
     }
 
     public ArrayList<Note> getAllData() {
-//        ArrayList<Note> shopData = new ArrayList<Note>();
-//
-//        String selectQuery = "SELECT " + COLUMN_ID + ","
-//                + COLUMN_DESC + " , "
-//                + COLUMN_DATE
-//                + " FROM " + TABLE_NOTE;
-//        SQLiteDatabase db = this.getReadableDatabase();
-//        Cursor cursor = db.rawQuery(selectQuery, null);
-//        if (cursor.moveToFirst()) {
-//            do {
-//                int id = cursor.getInt(0);
-//                String desc = cursor.getString(1);
-//                int cost = cursor.getInt(2);
-//                String date = cursor.getString(3);
-//                Note obj = new Note(id,desc,date);
-//                shopData.add(obj);
-//            } while (cursor.moveToNext());
-//        }
-        // Close connection
-//        cursor.close();
-//        db.close();
+        ArrayList<Note> shopData = new ArrayList<Note>();
+
+        String selectQuery = "SELECT " + COLUMN_ID + ","
+                + COLUMN_DESC + " , "
+                + COLUMN_DATE
+                + " FROM " + TABLE_NOTE;
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        if (cursor.moveToFirst()) {
+            do {
+                int id = cursor.getInt(0);
+                String desc = cursor.getString(1);
+                String date = cursor.getString(2);
+                Note obj = new Note(id,desc,date);
+                shopData.add(obj);
+            } while (cursor.moveToNext());
+        }
+//         Close connection
+        cursor.close();
+        db.close();
 
         return null;
     }

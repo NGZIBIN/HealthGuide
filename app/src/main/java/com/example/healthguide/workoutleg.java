@@ -12,7 +12,7 @@ public class workoutleg extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workoutleg);
-
+        this.setTitle("Leg Workout");
     }
 
     public void LegBasic1(View view){

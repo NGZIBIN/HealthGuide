@@ -10,5 +10,6 @@ public class dietBodyThird extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet_body_third);
+        this.setTitle("The Vegan Diet");
     }
 }

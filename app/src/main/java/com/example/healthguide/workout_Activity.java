@@ -20,6 +20,7 @@ public class workout_Activity extends AppCompatActivity {
         ImageView btnChest = (ImageView) findViewById(R.id.btnChest);
         ImageView btnBody = (ImageView) findViewById(R.id.btnBody);
 
+        this.setTitle("Workout");
 //        btnLeg.findViewById(R.id.btnLeg);
 //        btnChest.findViewById(R.id.btnChest);
 //        btnBody.findViewById(R.id.btnBody);

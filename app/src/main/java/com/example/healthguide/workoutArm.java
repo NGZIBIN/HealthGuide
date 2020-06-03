@@ -18,19 +18,19 @@ public class workoutArm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_workout_arm);
 
-
+    this.setTitle("Arm Workout");
     }
     public void startWorkoutArmBicep(View view) {
         Intent intent = new Intent(workoutArm.this,ArmBicepBasic.class);
         startActivity(intent);
     }
     public void startWorkoutBasicForearm(View view) {
-        Intent intent = new Intent(workoutArm.this,ArmBiceptAdvance.class);
+        Intent intent = new Intent(workoutArm.this,ArmForeArmBasic.class);
         startActivity(intent);
     }
 
     public void startWorkoutAdvanceBicepArm(View view) {
-        Intent intent = new Intent(workoutArm.this,ArmForeArmBasic.class);
+        Intent intent = new Intent(workoutArm.this,ArmBiceptAdvance.class);
         startActivity(intent);
     }
 

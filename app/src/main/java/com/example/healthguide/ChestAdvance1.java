@@ -6,16 +6,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import ticker.views.com.ticker.widgets.circular.timer.callbacks.CircularViewCallback;
 import ticker.views.com.ticker.widgets.circular.timer.view.CircularView;
 
 public class ChestAdvance1 extends AppCompatActivity {
     CircularView circularViewWithTimer;
+
+    FloatingActionButton btnStart;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setTitle("Military Press");
         setContentView(R.layout.activity_chest_advance1);
         circularViewWithTimer = findViewById(R.id.circular_view);
+
+        btnStart = findViewById(R.id.start);
         CircularView.OptionsBuilder builderWithTimer =
                 new CircularView.OptionsBuilder()
                         .shouldDisplayText(true)
@@ -45,7 +52,13 @@ public class ChestAdvance1 extends AppCompatActivity {
     public void  btn_pause(View view){
         if(circularViewWithTimer.pauseTimer())
         {
-            //Timer Paused
+            btnStart.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    circularViewWithTimer.resumeTimer();
+                }
+            });
+
         }
     }
 
